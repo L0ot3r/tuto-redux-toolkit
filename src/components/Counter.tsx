@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { increment, decrement } from '../redux/reducers/counterSlice';
 import { RootState } from '../redux/store';
 
+const btnStyles = 'bg-blue-400 text-white p-2 rounded-md uppercase font-semibold px-5';
+
 const Counter = () => {
   const dispatch = useDispatch();
   const { count } = useSelector((state: RootState) => state.counter.value);
@@ -22,12 +24,12 @@ const Counter = () => {
 			<div className='w-[500px] mx-auto'>
 				<div className='flex justify-center items-center gap-4'>
 					<button 
-            className='font-semibold text-3xl'
+            className={btnStyles}
             onClick={handleDec}
           >-</button>
 					<h2 className='text-3xl font-semibold px-5'>{count}</h2>
 					<button 
-            className='font-semibold text-3xl'
+            className={btnStyles}
             onClick={handleInc}
           >+</button>
 				</div>

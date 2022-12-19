@@ -1,23 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 	return (
 		<nav className='sticky top-0 w-full bg-slate-400 p-3 mb-5'>
 			<ul className='flex justify-center gap-5'>
 				<li>
-					<a className='text-white text-lg' href='/'>
+					<Link className='text-white text-lg' to='/'>
 						Home
-					</a>
+					</Link>
 				</li>
 				<li>
-					<a className='text-white text-lg' href='/contact'>
+					<Link className='text-white text-lg' to='/contact'>
 						Counter
-					</a>
+					</Link>
 				</li>
 				<li>
-					<a className='text-white text-lg' href='/login'>
+					<Link className='text-white text-lg' to='/login'>
 						Login
-					</a>
+					</Link>
 				</li>
 			</ul>
 		</nav>

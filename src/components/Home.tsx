@@ -1,9 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
 
 const Home = () => {
-  return (
-    <h1 className='text-4xl text-center mt-4'>Bienvenue sur le Tuto Redux</h1>
-  )
-}
+	const { count } = useSelector((state: RootState) => state.counter.value);
+	const { userName } = useSelector((state: RootState) => state.user.value);
 
-export default Home
+	return (
+		<>
+			<h1 className='text-4xl text-center mt-4 mb-7'>
+				Bienvenue sur la démo Redux
+			</h1>
+			<h2 className='text-3xl text-center font-semibold px-5'>
+				Le compteur: {count}
+			</h2>
+			<h2 className='text-3xl text-center font-semibold px-5'>
+				Le user:{' '}
+				{userName === 'defaultValue'
+					? "Personne n'est connecter"
+					: `${userName} est connecter`}
+			</h2>
+		</>
+	);
+};
+
+export default Home;

@@ -3,7 +3,7 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
   value: {
-    userName: "",
+    userName: "defaultValue",
   }
 }
 
