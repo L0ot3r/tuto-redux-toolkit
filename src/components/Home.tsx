@@ -17,7 +17,7 @@ const Home = () => {
 			<h2 className='text-3xl text-center font-semibold px-5'>
 				Le user:{' '}
 				{userName === 'defaultValue'
-					? "Personne n'est connecter"
+					? "Personne n'est connecté"
 					: `${userName} est connecté(e)`}
 			</h2>
 		</>
