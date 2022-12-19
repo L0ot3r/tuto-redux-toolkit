@@ -18,7 +18,7 @@ const Home = () => {
 				Le user:{' '}
 				{userName === 'defaultValue'
 					? "Personne n'est connecter"
-					: `${userName} est connecter`}
+					: `${userName} est connecté(e)`}
 			</h2>
 		</>
 	);
